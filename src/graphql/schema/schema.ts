@@ -1,4 +1,4 @@
-export const schema = `#graphql
+export const typeDefs = `#graphql
 
 type User{
     _id: ID!
@@ -26,6 +26,7 @@ type Query {
 type Mutation {
   updateUser(_id: ID!, name: String, email: String): User
   createUser(name: String!, email: String!, verified: String): User
+  createCourse(title: String, price: Int): Course
   deleteUser(_id: ID!): User
   deleteUserByEmail(email: String!): User
 }
